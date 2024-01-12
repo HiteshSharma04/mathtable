@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 style="font-size: 80px; color: darkorchid;">Mathematics <br> Table </h2>
+    <input type="number" id="no" placeholder="Enter Number" style="box-shadow: 1px 1px 2px 2px coral; width: 250px; height: 30px;"><br>
+    <span id="sp" style="color: red;"></span><br>
+    <button onclick="a()" style="box-shadow: 1px 1px 2px 2px coral; background-color: black;color: green; padding: 20px;width: 250px; border-radius: 30px;">Submit</button><br><br><br>
+    <div id="r" class="h"></div>
+    
+</body>
+<style>
+    button{
+        box-shadow: 1px 1px 2px 2px coral;
+        background-color: black;
+        color: green;
+        padding: 20px;
+        width: 250px;
+        border-radius: 30px;
+    }
+    button:hover{
+        background-color: greenyellow;
+        color: teal;
+    }
+    .h{
+        border: 1px solid gray;
+        border-radius: 10px;
+        box-shadow: 1px 1px 3px 3px magenta;
+        width: 300px;
+        margin-left: 500px;
+        background-color: chartreuse;
+        color: blue;
+        font-size: 20px;
+    }
+    body{
+        background-image: url(https://thumbs.dreamstime.com/z/vector-colorful-mathematics-background-element-flat-style-122586101.jpg);
+        text-align: center;
+    }
+    
+    
+    
+</style>
+
+
+<script>
+function a() {
+            let no = parseInt(document.getElementById("no").value);
+            let sp = document.getElementById("sp");
+            let r = document.getElementById("r");
+
+            if (!isNaN(no)) {
+                let result = "";
+                for (let i = 1; i <= 10; i++) {
+                    result += no + " x " + i + " = " + (no * i)  + "<br> " ;
+                }
+                r.innerHTML += result;
+            } else {
+                sp.innerHTML = "Please Enter A Valid Number";
+            }
+        }
+        document.getElementById("no");
+        no.addEventListener("input",function(){
+        sp.textContent = ""; 
+    })
+    
+</script>
+</html>
